@@ -53,11 +53,6 @@ void Fixed::setRawBits( int const raw)
     m_fixedValue = raw;
 };
 
-std::ostream& operator<<(std::ostream& os, Fixed const &rhs)
-{
-    os << rhs.toFloat();
-    return os;
-};
 
 Fixed& Fixed::operator=( Fixed const &rhs)
 {
@@ -65,4 +60,10 @@ Fixed& Fixed::operator=( Fixed const &rhs)
     if (this != &rhs)
         this->m_fixedValue = rhs.getRawBits();
     return *this;
+};
+
+std::ostream& operator<<(std::ostream& os, Fixed const &rhs)
+{
+    os << rhs.toFloat();
+    return os;
 };
