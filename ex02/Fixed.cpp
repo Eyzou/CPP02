@@ -1,6 +1,14 @@
-//
-// Created by eyza on 02/07/24.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ehamm <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/04 18:33:56 by ehamm             #+#    #+#             */
+/*   Updated: 2024/07/04 18:33:58 by ehamm            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Fixed.h"
 
@@ -92,22 +100,22 @@ bool Fixed::operator!=( Fixed const rhs) const
     return (this->m_fixedValue != rhs.getRawBits());
 };
 
-float Fixed::operator+( Fixed const rhs)
+float Fixed::operator+( Fixed const rhs) const
 {
     return (this->toFloat() + rhs.toFloat());
 };
 
-float Fixed::operator-( Fixed const rhs)
+float Fixed::operator-( Fixed const rhs) const
 {
     return (this->toFloat() - rhs.toFloat());
 };
 
-float Fixed::operator*( Fixed const rhs)
+float Fixed::operator*( Fixed const rhs) const
 {
     return (this->toFloat() * rhs.toFloat());
 };
 
-float Fixed::operator/( Fixed const rhs)
+float Fixed::operator/( Fixed const rhs) const
 {
     return (this->toFloat() / rhs.toFloat());
 };

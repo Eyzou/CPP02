@@ -1,12 +1,20 @@
-//
-// Created by eyza on 02/07/24.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ehamm <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/04 18:34:01 by ehamm             #+#    #+#             */
+/*   Updated: 2024/07/04 18:34:40 by ehamm            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <iostream>
 #include <cmath>
 
 #ifndef FIXED_H
-#define FIXED_H
+# define FIXED_H
 
 class Fixed {
 
@@ -21,17 +29,17 @@ public:
 
     Fixed& operator=( Fixed const &rhs);
 
-    bool operator>( Fixed const rhs) const ;
-    bool operator<( Fixed const rhs)const ;
-    bool operator>=( Fixed const rhs)const ;
-    bool operator<=( Fixed const rhs)const ;
-    bool operator==( Fixed const rhs)const ;
-    bool operator!=( Fixed const rhs)const ;
+    bool operator>( Fixed const rhs) const;
+    bool operator<( Fixed const rhs)const;
+    bool operator>=( Fixed const rhs)const;
+    bool operator<=( Fixed const rhs)const;
+    bool operator==( Fixed const rhs)const;
+    bool operator!=( Fixed const rhs)const;
 
-    float operator+( Fixed const rhs);
-    float operator-( Fixed const rhs);
-    float operator*( Fixed const rhs);
-    float operator/( Fixed const rhs);
+    float operator+( Fixed const rhs) const;
+    float operator-( Fixed const rhs) const;
+    float operator*( Fixed const rhs) const;
+    float operator/( Fixed const rhs) const;
 
     Fixed operator++();
     Fixed operator++(int);
