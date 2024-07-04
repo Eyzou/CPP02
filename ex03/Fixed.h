@@ -1,12 +1,8 @@
-//
-// Created by eyza on 02/07/24.
-//
+#ifndef FIXED_H
+# define FIXED_H
 
 #include <iostream>
 #include <cmath>
-
-#ifndef FIXED_H
-#define FIXED_H
 
 class Fixed {
 
@@ -22,16 +18,16 @@ public:
     Fixed& operator=( Fixed const &rhs);
 
     bool operator>( Fixed const rhs) const ;
-    bool operator<( Fixed const rhs)const ;
-    bool operator>=( Fixed const rhs)const ;
-    bool operator<=( Fixed const rhs)const ;
-    bool operator==( Fixed const rhs)const ;
-    bool operator!=( Fixed const rhs)const ;
+    bool operator<( Fixed const rhs) const ;
+    bool operator>=( Fixed const rhs) const ;
+    bool operator<=( Fixed const rhs) const ;
+    bool operator==( Fixed const rhs) const ;
+    bool operator!=( Fixed const rhs) const ;
 
-    float operator+( Fixed const rhs);
-    float operator-( Fixed const rhs);
-    float operator*( Fixed const rhs);
-    float operator/( Fixed const rhs);
+    float operator+( Fixed const rhs) const;
+    float operator-( Fixed const rhs) const ;
+    float operator*( Fixed const rhs) const ;
+    float operator/( Fixed const rhs) const ;
 
     Fixed operator++();
     Fixed operator++(int);

@@ -1,9 +1,8 @@
-//
-// Created by eyza on 03/07/24.
-//
-
 #ifndef POINT_H
-#define POINT_H
+# define POINT_H
+
+#include "Fixed.h"
+#include <iostream>
 
 class Point {
 
@@ -15,15 +14,15 @@ class Point {
 
         Point& operator=( Point const &rhs);
 
-        float getX( void ) const;
-        float getY( void ) const;
-        void setX(float const new_x );
-        void setY( float const new_y );
-
+        Fixed const getX( void ) const;
+        Fixed const getY( void ) const;
+	
     private:
-        Fixed const m_x;
-        Fixed const m_y;
+        Fixed  m_x;
+        Fixed  m_y;
 };
+
+std::ostream& operator<<(std::ostream& os, Point const &point);
 
 
 
